@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  mapapi:
+  api:
     build: api
     environment:
       - AIRTABLE_TOKEN
