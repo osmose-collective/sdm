@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/base64"
 	"encoding/json"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -120,7 +121,8 @@ func main() {
 		render.JSON(w, r, onboardings)
 	})
 
-	panic(http.ListenAndServe(":3333", r))
+	fmt.Println("Listening on :3333...")
+	panic(http.ListenAndServe("0.0.0.0:3333", r))
 }
 
 func getOnboardingsWithLocation() ([]OnboardingWithLocation, error) {

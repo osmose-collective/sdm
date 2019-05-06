@@ -2,7 +2,7 @@ version: '2'
 
 services:
   mapapi:
-    build: map/api
+    build: api
     environment:
       - AIRTABLE_TOKEN
       - VIRTUAL_HOST=api.sdm.stack.cool
