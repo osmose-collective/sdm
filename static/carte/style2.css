@@ -1,0 +1,14 @@
+body, html{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+}
+
+#map {
+	width: 100%; 
+	height: 100%; 
+}
+.mycluster{
+	background-image: url('https://gismentor.com/wp-content/uploads/2019/05/cmarker3.png');
+	background-size: 100% 100%;
+}
