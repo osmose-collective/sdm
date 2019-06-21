@@ -4,6 +4,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -71,6 +72,7 @@ func refreshCache() error {
 	table := client.Table(TABLE_NAME)
 	entries := []OnboardingRecord{}
 	table.List(&entries, &airtable.Options{})
+	fmt.Println(entries)
 	mutex.Lock()
 	defer mutex.Unlock()
 	cache.Onboardings = make([]*OnboardingRecord, 0)
@@ -101,6 +103,18 @@ func main() {
 			time.Sleep(time.Second * 10)
 		}
 	}()
+
+	if os.Getenv("GEN_AND_STOP") == "1" {
+		onboardings, err := getOnboardingsWithLocation()
+		if err != nil {
+			panic(err)
+		}
+		out, _ := json.Marshal(onboardings)
+		if err := ioutil.WriteFile("./static/carte/data.js", out, 0644); err != nil {
+			panic(err)
+		}
+		return
+	}
 
 	r := chi.NewRouter()
 

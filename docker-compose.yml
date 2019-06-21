@@ -1,8 +1,10 @@
-version: '2'
+version: '3'
 
 services:
   api:
     build: api
+    env_file:
+      - .env
     environment:
       - AIRTABLE_TOKEN
       - VIRTUAL_HOST=api.lasuitedumonde.com
