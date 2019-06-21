@@ -5,5 +5,5 @@ services:
     build: api
     environment:
       - AIRTABLE_TOKEN
-      - VIRTUAL_HOST=sdm.stack.cool
+      - VIRTUAL_HOST=api.lasuitedumonde.com
       - VIRTUAL_PORT=3333
