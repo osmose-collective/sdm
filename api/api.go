@@ -39,9 +39,10 @@ type LatLong struct {
 type OnboardingRecord struct {
 	airtable.Record
 	Fields struct {
-		LatLong  string `json:"Latlong2"`
+		LatLong  string `json:"@map"`
 		Location string `json:"@endroitpourinitierunecommune"`
 		Amount   int    `json:"@nombredepersonnepourinitiercommune"`
+		Comment  string `json:"@Commentaire"`
 	}
 	Translated struct {
 		LatLong LatLong
@@ -71,8 +72,9 @@ func refreshCache() error {
 	}
 	table := client.Table(TABLE_NAME)
 	entries := []OnboardingRecord{}
-	table.List(&entries, &airtable.Options{})
-	fmt.Println(entries)
+	table.List(&entries, &airtable.Options{
+		Fields: []string{"LatLong", "Location", "Amount", "Comment"},
+	})
 	mutex.Lock()
 	defer mutex.Unlock()
 	cache.Onboardings = make([]*OnboardingRecord, 0)
@@ -95,6 +97,23 @@ func refreshCache() error {
 }
 
 func main() {
+	if os.Getenv("GEN_AND_STOP") == "1" {
+		if err := refreshCache(); err != nil {
+			panic(err)
+		}
+
+		onboardings, err := getOnboardingsWithLocation()
+		if err != nil {
+			panic(err)
+		}
+
+		out, _ := json.Marshal(onboardings)
+		if err := ioutil.WriteFile("./static/carte/data.js", append([]byte("var data = "), out...), 0644); err != nil {
+			panic(err)
+		}
+		return
+	}
+
 	go func() {
 		for {
 			if err := refreshCache(); err != nil {
@@ -103,18 +122,6 @@ func main() {
 			time.Sleep(time.Second * 10)
 		}
 	}()
-
-	if os.Getenv("GEN_AND_STOP") == "1" {
-		onboardings, err := getOnboardingsWithLocation()
-		if err != nil {
-			panic(err)
-		}
-		out, _ := json.Marshal(onboardings)
-		if err := ioutil.WriteFile("./static/carte/data.js", out, 0644); err != nil {
-			panic(err)
-		}
-		return
-	}
 
 	r := chi.NewRouter()
 

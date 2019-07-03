@@ -6,4 +6,4 @@ docker.up:
 .PHONY: gen
 gen:
 	docker-compose build
-	docker-compose run -w "$(PWD)" -v "$(PWD):$(PWD)" -e GEN_AND_STOP=2 api
+	docker-compose run -w "$(PWD)" -v "$(PWD):$(PWD)" -e GEN_AND_STOP=1 api
