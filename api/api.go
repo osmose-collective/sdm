@@ -50,10 +50,11 @@ type OnboardingRecord struct {
 }
 
 type OnboardingWithLocation struct {
-	Lat      float64
-	Long     float64
-	Amount   int
-	Location string
+	Lat      float64 `json:"lat"`
+	Long     float64 `json:"long"`
+	Location string  `json:"location"`
+	Amount   int     `json:"amount,omitempty"`
+	Comment  string  `json:"comment,omitempty"`
 }
 
 type Cache struct {
@@ -107,7 +108,7 @@ func main() {
 			panic(err)
 		}
 
-		out, _ := json.Marshal(onboardings)
+		out, _ := json.MarshalIndent(onboardings, "", "  ")
 		if err := ioutil.WriteFile("./static/carte/data.js", append([]byte("var data = "), out...), 0644); err != nil {
 			panic(err)
 		}
@@ -159,6 +160,7 @@ func getOnboardingsWithLocation() ([]OnboardingWithLocation, error) {
 			Long:     entry.Translated.LatLong.O.Lng,
 			Location: entry.Translated.LatLong.O.FormattedAddress,
 			Amount:   entry.Fields.Amount,
+			Comment:  entry.Fields.Comment,
 		})
 	}
 	return ret, nil

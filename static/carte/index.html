@@ -63,12 +63,20 @@ iconSize = 80;
 		});
 
 		for (var i = 0; i < data.length; i++) {
-			var a = data[i];
-			var title = a["Location"];
-			var popupText = "<p><b>Location:</b> " + a["Location"] + "<br/><br/><b>Amount:</b> " + a["Amount"] + "</p>"
-			var marker = L.marker(new L.LatLng(a["Lat"], a["Long"]), { title: title, icon: mIcon });
-			marker.bindPopup(popupText);
-			markers.addLayer(marker);
+		    var a = data[i];
+		    var title = a["location"];
+		    var popupText = "<p>";
+                    popupText += "<b>Lieu:</b> " + a["location"];
+                    if (a["amount"] > 0) {
+                        popupText += "<br/><br/><b>Nombre de personnes pour initier la commune:</b> " + a["amount"];
+                    }
+                    if (a["comment"] !== undefined && a["comment"].length > 0) {
+                        popupText += "<br/><br/><i>" + a["comment"] + "</i>";
+                    }
+                    popupText += "</p>"
+                    var marker = L.marker(new L.LatLng(a["lat"], a["long"]), { title: title, icon: mIcon });
+                    marker.bindPopup(popupText);
+                    markers.addLayer(marker);
 		}
 
 		map.addLayer(markers);
