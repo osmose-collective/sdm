@@ -1,1 +1,425 @@
-var data = [{"Lat":45.17396300000001,"Long":5.071073999999953,"Amount":0,"Location":"26350 Crépol, France"},{"Lat":45.4932045,"Long":6.472399999999993,"Amount":1,"Location":"Savoie, France"},{"Lat":48.2020471,"Long":-2.93264350000004,"Amount":2,"Location":"Bretagne, France"},{"Lat":43.600461,"Long":2.702604000000065,"Amount":6,"Location":"34330 La Salvetat-sur-Agout, France"},{"Lat":45.797222,"Long":6.104722000000038,"Amount":5,"Location":"Semnoz, 74540 Viuz-la-Chiésaz, France"},{"Lat":49.22269800000001,"Long":0.7299900000000434,"Amount":2,"Location":"1 Sente du Moulin au Cat, 27800 Le Bec-Hellouin, France"},{"Lat":47.13449139999999,"Long":7.2416365999999925,"Amount":1,"Location":"Rue d'Aarberg 107A, 2502 Bienne, Suisse"},{"Lat":44.4076034,"Long":4.222381300000052,"Amount":0,"Location":"Chaulet, 07460 Berrias-et-Casteljau, France"},{"Lat":48.3181795,"Long":7.441624100000013,"Amount":10,"Location":"Alsace, France"},{"Lat":43.6210597,"Long":-79.6667875,"Amount":4,"Location":"115 Matheson Blvd E, Mississauga, ON L4Z 1X8, Canada"},{"Lat":45.623206,"Long":0.6910460000000285,"Amount":0,"Location":"24360 Piégut-Pluviers, France"},{"Lat":43.7050255,"Long":5.162367200000062,"Amount":2,"Location":"98 Rue Frédéric Mistral, 13980 Alleins, France"},{"Lat":43.557156,"Long":6.007749999999987,"Amount":1,"Location":"83670 Barjols, France"},{"Lat":48.4911699,"Long":-1.2941650000000209,"Amount":4,"Location":"35420 Le Ferré, France"},{"Lat":48.2020471,"Long":-2.93264350000004,"Amount":3,"Location":"Bretagne, France"},{"Lat":49.7624642,"Long":4.628505300000029,"Amount":10,"Location":"Ardennes, France"},{"Lat":45.637154,"Long":4.390390000000025,"Amount":4,"Location":"42140 Chazelles-sur-Lyon, France"},{"Lat":43.604652,"Long":1.4442090000000007,"Amount":0,"Location":"Toulouse, France"},{"Lat":46.3115552,"Long":3.416765499999997,"Amount":5,"Location":"Allier, France"},{"Lat":49.003959,"Long":0.6378180000000384,"Amount":10,"Location":"Landepéreuse, France"},{"Lat":48.001937,"Long":-2.256383000000028,"Amount":0,"Location":"La Guette, 35380 Paimpont, France"},{"Lat":50.503887,"Long":4.4699359999999615,"Amount":10,"Location":"Belgique"},{"Lat":48.3181795,"Long":7.441624100000013,"Amount":10,"Location":"Alsace, France"},{"Lat":42.9326292,"Long":1.44346900000005,"Amount":3,"Location":"Ariège, France"},{"Lat":48.692054,"Long":6.184416999999939,"Amount":1,"Location":"Nancy, France"},{"Lat":44.2179747,"Long":2.6189272999999957,"Amount":10,"Location":"Aveyron, France"},{"Lat":48.2292016,"Long":-1.5300694999999678,"Amount":1,"Location":"Ille-et-Vilaine, France"},{"Lat":50.503887,"Long":4.4699359999999615,"Amount":6,"Location":"Belgique"},{"Lat":50.503887,"Long":4.4699359999999615,"Amount":10,"Location":"Belgique"},{"Lat":50.7309955,"Long":4.485670700000014,"Amount":30,"Location":"1310 La Hulpe, Belgique"},{"Lat":47.0525047,"Long":4.383721499999979,"Amount":5,"Location":"Bourgogne, France"},{"Lat":49.2616285,"Long":-0.7203715000000557,"Amount":0,"Location":"14400 Nonant, France"},{"Lat":47.54111100000001,"Long":2.991745000000037,"Amount":3,"Location":"58310 Arquian, France"},{"Lat":50.4024613,"Long":5.075553600000035,"Amount":20,"Location":"5340 Gesves, Belgique"},{"Lat":44.7753878,"Long":2.086133000000018,"Amount":4,"Location":"46210 Sénaillac-Latronquière, France"},{"Lat":-40.900557,"Long":174.88597100000004,"Amount":8,"Location":"Nouvelle-Zélande"},{"Lat":48.11947199999999,"Long":-1.6029230000000325,"Amount":1,"Location":"35510 Cesson-Sévigné, France"},{"Lat":44.759629,"Long":4.56244259999994,"Amount":2,"Location":"Ardèche, France"},{"Lat":48.2633273,"Long":-2.872044800000026,"Amount":1,"Location":"22460 Grâce-Uzel, France"},{"Lat":47.449734,"Long":-2.31704400000001,"Amount":0,"Location":"44410 Herbignac, France"},{"Lat":42.9326292,"Long":1.44346900000005,"Amount":5,"Location":"Ariège, France"},{"Lat":49.2616285,"Long":-0.7203715000000557,"Amount":100,"Location":"14400 Nonant, France"},{"Lat":42.9326292,"Long":1.44346900000005,"Amount":6,"Location":"Ariège, France"},{"Lat":48.2020471,"Long":-2.93264350000004,"Amount":2,"Location":"Bretagne, France"},{"Lat":45.7032695,"Long":3.344853599999965,"Amount":1,"Location":"Auvergne, France"},{"Lat":48.3181795,"Long":7.441624100000013,"Amount":20,"Location":"Alsace, France"},{"Lat":39.39987199999999,"Long":-8.224454000000037,"Amount":0,"Location":"Portugal"},{"Lat":44.31374599999999,"Long":0.08835399999998117,"Amount":5,"Location":"47700 Casteljaloux, France"},{"Lat":42.6886591,"Long":2.8948331999999937,"Amount":2,"Location":"Perpignan, France"},{"Lat":43.2449128,"Long":-1.2891035999999758,"Amount":0,"Location":"Pays basque français, France"},{"Lat":43.610769,"Long":3.8767159999999876,"Amount":0,"Location":"Montpellier, France"},{"Lat":44.20021699999999,"Long":3.922162000000071,"Amount":2,"Location":"48160 Saint-Martin-de-Boubaux, France"},{"Lat":45.7124142,"Long":3.0155824999999368,"Amount":7,"Location":"Puy-de-Dôme, France"},{"Lat":48.250666,"Long":7.021719999999959,"Amount":2,"Location":"Coinches, France"},{"Lat":49.2616285,"Long":-0.7203715000000557,"Amount":5,"Location":"14400 Nonant, France"},{"Lat":48.5734053,"Long":7.752111300000024,"Amount":0,"Location":"Strasbourg, France"},{"Lat":48.856614,"Long":2.3522219000000177,"Amount":12,"Location":"Paris, France"},{"Lat":46.03776329999999,"Long":2.0627832000000126,"Amount":6,"Location":"Creuse, France"},{"Lat":47.472339,"Long":7.305409000000054,"Amount":0,"Location":"68480 Ligsdorf, France"},{"Lat":45.4320081,"Long":2.0195909000000256,"Amount":0,"Location":"Corrèze, France"},{"Lat":44.837789,"Long":-0.5791799999999512,"Amount":10,"Location":"Bordeaux, France"},{"Lat":48.47552700000001,"Long":-2.0163880000000063,"Amount":3,"Location":"22100 Taden, France"},{"Lat":50.61129099999999,"Long":1.9947260000000142,"Amount":3,"Location":"Campagne-lès-Boulonnais, France"},{"Lat":45.74948999999999,"Long":-0.77331879999997,"Amount":10,"Location":"Charente-Maritime, France"},{"Lat":5.3599517,"Long":-4.008256299999971,"Amount":8,"Location":"Abidjan, Côte d'Ivoire"},{"Lat":50.46816,"Long":1.768269000000032,"Amount":0,"Location":"62170 Montreuil, France"},{"Lat":49.1193089,"Long":6.1757155999999895,"Amount":0,"Location":"Metz, France"},{"Lat":47.238924,"Long":4.07640600000002,"Amount":6,"Location":"58230 Gouloux, France"},{"Lat":44.759629,"Long":4.56244259999994,"Amount":1,"Location":"Ardèche, France"},{"Lat":48.2020471,"Long":-2.93264350000004,"Amount":4,"Location":"Bretagne, France"},{"Lat":44.4845151,"Long":2.2576212999999825,"Amount":3,"Location":"Mas de Labro, 12220 Lugan, France"},{"Lat":44.837789,"Long":-0.5791799999999512,"Amount":8,"Location":"Bordeaux, France"},{"Lat":44.759629,"Long":4.56244259999994,"Amount":0,"Location":"Ardèche, France"}]
+var data = [
+  {
+    "lat": 45.17396300000001,
+    "long": 5.071073999999953,
+    "location": "26350 Crépol, France"
+  },
+  {
+    "lat": 45.4932045,
+    "long": 6.472399999999993,
+    "location": "Savoie, France",
+    "amount": 1
+  },
+  {
+    "lat": 48.2020471,
+    "long": -2.93264350000004,
+    "location": "Bretagne, France",
+    "amount": 2
+  },
+  {
+    "lat": 43.600461,
+    "long": 2.702604000000065,
+    "location": "34330 La Salvetat-sur-Agout, France",
+    "amount": 6
+  },
+  {
+    "lat": 45.797222,
+    "long": 6.104722000000038,
+    "location": "Semnoz, 74540 Viuz-la-Chiésaz, France",
+    "amount": 5
+  },
+  {
+    "lat": 49.22269800000001,
+    "long": 0.7299900000000434,
+    "location": "1 Sente du Moulin au Cat, 27800 Le Bec-Hellouin, France",
+    "amount": 2
+  },
+  {
+    "lat": 47.13449139999999,
+    "long": 7.2416365999999925,
+    "location": "Rue d'Aarberg 107A, 2502 Bienne, Suisse",
+    "amount": 1
+  },
+  {
+    "lat": 44.4076034,
+    "long": 4.222381300000052,
+    "location": "Chaulet, 07460 Berrias-et-Casteljau, France"
+  },
+  {
+    "lat": 48.3181795,
+    "long": 7.441624100000013,
+    "location": "Alsace, France",
+    "amount": 10
+  },
+  {
+    "lat": 43.6210597,
+    "long": -79.6667875,
+    "location": "115 Matheson Blvd E, Mississauga, ON L4Z 1X8, Canada",
+    "amount": 4
+  },
+  {
+    "lat": 45.623206,
+    "long": 0.6910460000000285,
+    "location": "24360 Piégut-Pluviers, France",
+    "comment": "Commune Imaginée du Bandiat"
+  },
+  {
+    "lat": 43.7050255,
+    "long": 5.162367200000062,
+    "location": "98 Rue Frédéric Mistral, 13980 Alleins, France",
+    "amount": 2
+  },
+  {
+    "lat": 43.557156,
+    "long": 6.007749999999987,
+    "location": "83670 Barjols, France",
+    "amount": 1
+  },
+  {
+    "lat": 48.4911699,
+    "long": -1.2941650000000209,
+    "location": "35420 Le Ferré, France",
+    "amount": 4
+  },
+  {
+    "lat": 48.2020471,
+    "long": -2.93264350000004,
+    "location": "Bretagne, France",
+    "amount": 3
+  },
+  {
+    "lat": 49.7624642,
+    "long": 4.628505300000029,
+    "location": "Ardennes, France",
+    "amount": 10
+  },
+  {
+    "lat": 45.637154,
+    "long": 4.390390000000025,
+    "location": "42140 Chazelles-sur-Lyon, France",
+    "amount": 4
+  },
+  {
+    "lat": 43.604652,
+    "long": 1.4442090000000007,
+    "location": "Toulouse, France"
+  },
+  {
+    "lat": 46.3115552,
+    "long": 3.416765499999997,
+    "location": "Allier, France",
+    "amount": 5
+  },
+  {
+    "lat": 49.003959,
+    "long": 0.6378180000000384,
+    "location": "Landepéreuse, France",
+    "amount": 10
+  },
+  {
+    "lat": 48.001937,
+    "long": -2.256383000000028,
+    "location": "La Guette, 35380 Paimpont, France"
+  },
+  {
+    "lat": 50.503887,
+    "long": 4.4699359999999615,
+    "location": "Belgique",
+    "amount": 10
+  },
+  {
+    "lat": 48.3181795,
+    "long": 7.441624100000013,
+    "location": "Alsace, France",
+    "amount": 10
+  },
+  {
+    "lat": 42.9326292,
+    "long": 1.44346900000005,
+    "location": "Ariège, France",
+    "amount": 3
+  },
+  {
+    "lat": 48.692054,
+    "long": 6.184416999999939,
+    "location": "Nancy, France",
+    "amount": 1
+  },
+  {
+    "lat": 44.2179747,
+    "long": 2.6189272999999957,
+    "location": "Aveyron, France",
+    "amount": 10
+  },
+  {
+    "lat": 48.2292016,
+    "long": -1.5300694999999678,
+    "location": "Ille-et-Vilaine, France",
+    "amount": 1
+  },
+  {
+    "lat": 50.503887,
+    "long": 4.4699359999999615,
+    "location": "Belgique",
+    "amount": 6
+  },
+  {
+    "lat": 50.503887,
+    "long": 4.4699359999999615,
+    "location": "Belgique",
+    "amount": 10
+  },
+  {
+    "lat": 50.7309955,
+    "long": 4.485670700000014,
+    "location": "1310 La Hulpe, Belgique",
+    "amount": 30
+  },
+  {
+    "lat": 47.0525047,
+    "long": 4.383721499999979,
+    "location": "Bourgogne, France",
+    "amount": 5
+  },
+  {
+    "lat": 49.2616285,
+    "long": -0.7203715000000557,
+    "location": "14400 Nonant, France"
+  },
+  {
+    "lat": 47.54111100000001,
+    "long": 2.991745000000037,
+    "location": "58310 Arquian, France",
+    "amount": 3
+  },
+  {
+    "lat": 50.4024613,
+    "long": 5.075553600000035,
+    "location": "5340 Gesves, Belgique",
+    "amount": 20
+  },
+  {
+    "lat": 44.7753878,
+    "long": 2.086133000000018,
+    "location": "46210 Sénaillac-Latronquière, France",
+    "amount": 4
+  },
+  {
+    "lat": -40.900557,
+    "long": 174.88597100000004,
+    "location": "Nouvelle-Zélande",
+    "amount": 8
+  },
+  {
+    "lat": 48.11947199999999,
+    "long": -1.6029230000000325,
+    "location": "35510 Cesson-Sévigné, France",
+    "amount": 1
+  },
+  {
+    "lat": 44.759629,
+    "long": 4.56244259999994,
+    "location": "Ardèche, France",
+    "amount": 2
+  },
+  {
+    "lat": 48.2633273,
+    "long": -2.872044800000026,
+    "location": "22460 Grâce-Uzel, France",
+    "amount": 1
+  },
+  {
+    "lat": 47.449734,
+    "long": -2.31704400000001,
+    "location": "44410 Herbignac, France"
+  },
+  {
+    "lat": 42.9326292,
+    "long": 1.44346900000005,
+    "location": "Ariège, France",
+    "amount": 5
+  },
+  {
+    "lat": 49.2616285,
+    "long": -0.7203715000000557,
+    "location": "14400 Nonant, France",
+    "amount": 100
+  },
+  {
+    "lat": 42.9326292,
+    "long": 1.44346900000005,
+    "location": "Ariège, France",
+    "amount": 6
+  },
+  {
+    "lat": 48.2020471,
+    "long": -2.93264350000004,
+    "location": "Bretagne, France",
+    "amount": 2
+  },
+  {
+    "lat": 45.7032695,
+    "long": 3.344853599999965,
+    "location": "Auvergne, France",
+    "amount": 1
+  },
+  {
+    "lat": 48.3181795,
+    "long": 7.441624100000013,
+    "location": "Alsace, France",
+    "amount": 20
+  },
+  {
+    "lat": 39.39987199999999,
+    "long": -8.224454000000037,
+    "location": "Portugal"
+  },
+  {
+    "lat": 44.31374599999999,
+    "long": 0.08835399999998117,
+    "location": "47700 Casteljaloux, France",
+    "amount": 5
+  },
+  {
+    "lat": 42.6886591,
+    "long": 2.8948331999999937,
+    "location": "Perpignan, France",
+    "amount": 2
+  },
+  {
+    "lat": 43.2449128,
+    "long": -1.2891035999999758,
+    "location": "Pays basque français, France"
+  },
+  {
+    "lat": 43.610769,
+    "long": 3.8767159999999876,
+    "location": "Montpellier, France"
+  },
+  {
+    "lat": 44.20021699999999,
+    "long": 3.922162000000071,
+    "location": "48160 Saint-Martin-de-Boubaux, France",
+    "amount": 2
+  },
+  {
+    "lat": 45.7124142,
+    "long": 3.0155824999999368,
+    "location": "Puy-de-Dôme, France",
+    "amount": 7
+  },
+  {
+    "lat": 48.250666,
+    "long": 7.021719999999959,
+    "location": "Coinches, France",
+    "amount": 2
+  },
+  {
+    "lat": 49.2616285,
+    "long": -0.7203715000000557,
+    "location": "14400 Nonant, France",
+    "amount": 5
+  },
+  {
+    "lat": 48.5734053,
+    "long": 7.752111300000024,
+    "location": "Strasbourg, France"
+  },
+  {
+    "lat": 48.856614,
+    "long": 2.3522219000000177,
+    "location": "Paris, France",
+    "amount": 12
+  },
+  {
+    "lat": 46.03776329999999,
+    "long": 2.0627832000000126,
+    "location": "Creuse, France",
+    "amount": 6
+  },
+  {
+    "lat": 47.472339,
+    "long": 7.305409000000054,
+    "location": "68480 Ligsdorf, France"
+  },
+  {
+    "lat": 45.4320081,
+    "long": 2.0195909000000256,
+    "location": "Corrèze, France"
+  },
+  {
+    "lat": 44.837789,
+    "long": -0.5791799999999512,
+    "location": "Bordeaux, France",
+    "amount": 10
+  },
+  {
+    "lat": 48.47552700000001,
+    "long": -2.0163880000000063,
+    "location": "22100 Taden, France",
+    "amount": 3
+  },
+  {
+    "lat": 50.61129099999999,
+    "long": 1.9947260000000142,
+    "location": "Campagne-lès-Boulonnais, France",
+    "amount": 3
+  },
+  {
+    "lat": 45.74948999999999,
+    "long": -0.77331879999997,
+    "location": "Charente-Maritime, France",
+    "amount": 10
+  },
+  {
+    "lat": 5.3599517,
+    "long": -4.008256299999971,
+    "location": "Abidjan, Côte d'Ivoire",
+    "amount": 8
+  },
+  {
+    "lat": 50.46816,
+    "long": 1.768269000000032,
+    "location": "62170 Montreuil, France"
+  },
+  {
+    "lat": 49.1193089,
+    "long": 6.1757155999999895,
+    "location": "Metz, France"
+  },
+  {
+    "lat": 47.238924,
+    "long": 4.07640600000002,
+    "location": "58230 Gouloux, France",
+    "amount": 6
+  },
+  {
+    "lat": 44.759629,
+    "long": 4.56244259999994,
+    "location": "Ardèche, France",
+    "amount": 1
+  },
+  {
+    "lat": 48.2020471,
+    "long": -2.93264350000004,
+    "location": "Bretagne, France",
+    "amount": 4
+  },
+  {
+    "lat": 44.4845151,
+    "long": 2.2576212999999825,
+    "location": "Mas de Labro, 12220 Lugan, France",
+    "amount": 3
+  },
+  {
+    "lat": 44.837789,
+    "long": -0.5791799999999512,
+    "location": "Bordeaux, France",
+    "amount": 8
+  },
+  {
+    "lat": 44.759629,
+    "long": 4.56244259999994,
+    "location": "Ardèche, France"
+  }
+]
