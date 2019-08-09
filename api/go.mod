@@ -7,5 +7,5 @@ require (
 	github.com/go-chi/chi v4.0.2+incompatible
 	github.com/go-chi/jsonp v0.0.0-20170809160916-b971022286e2
 	github.com/go-chi/render v1.0.1
-	go.uber.org/ratelimit v0.0.0-20180316092928-c15da0234277 // indirect
+	go.uber.org/ratelimit v0.1.0 // indirect
 )
