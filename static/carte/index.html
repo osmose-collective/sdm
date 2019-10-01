@@ -1,86 +1,85 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Carte de la Suite du Monde</title>
-
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
-	<script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="style2.css" />
-
-	<link rel="stylesheet" href="MarkerCluster/dist/MarkerCluster.css" />
-	<link rel="stylesheet" href="MarkerCluster/dist/MarkerCluster.Default.css" />
-	<script src="MarkerCluster/dist/leaflet.markercluster-src.js"></script>
-	<script src="data.js"></script>
-
-</head>
-<body>
-
-	<div id="map"></div>
-	<script type="text/javascript">
-
-		var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				maxZoom: 20,
-				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-			}),
-			latlng = L.latLng(45, -1.24);
-
-		var map = L.map('map', {center: latlng, zoom: 5, layers: [tiles]});
-
-		var mIcon = L.icon({
-		    iconUrl: 'pmarker.png',
-		    iconSize:     [25, 30], // size of the icon
-		    iconAnchor:   [12, 30], // point of the icon which will correspond to marker's location
-		    popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
-		});
-
-		var markers = L.markerClusterGroup({
-			iconCreateFunction: function (cluster) {
-				var count = cluster.getChildCount();
-				var iconSize = 50;
-				var iconSizeW = 40;
-				var iconSizeH = 50;
-				if(count <= 5){
-					iconSize = 50;
-					iconSizeW = 40;
-					iconSizeH = 50;
-				}else if(count <= 10){
-iconSize = 60;
-					iconSizeW = 50;
-					iconSizeH = 60;
-				}else if(count <= 20){
-iconSize = 70;
-				iconSizeW = 60;
-					iconSizeH = 70;
-				}else{
-iconSize = 80;
-				iconSizeW = 70;
-					iconSizeH = 80;
-				}
-				return L.divIcon({ html: '<div style="display: table;width: 100%;height: 100%;text-align: center;"><span style="display: table-cell;vertical-align: middle;color:#fff;">'+count+'</span></div>', className: 'mycluster', iconSize: L.point(iconSize, iconSize)});
-			},
-		});
-
-		for (var i = 0; i < data.length; i++) {
-		    var a = data[i];
-		    var title = a["location"];
-		    var popupText = "<p>";
-                    popupText += "<b>Lieu:</b> " + a["location"];
-                    if (a["amount"] > 0) {
-                        popupText += "<br/><br/><b>Nombre de personnes pour initier la commune:</b> " + a["amount"];
-                    }
-                    if (a["comment"] !== undefined && a["comment"].length > 0) {
-                        popupText += "<br/><br/><i>" + a["comment"] + "</i>";
-                    }
-                    popupText += "</p>"
-                    var marker = L.marker(new L.LatLng(a["lat"], a["long"]), { title: title, icon: mIcon });
-                    marker.bindPopup(popupText);
-                    markers.addLayer(marker);
-		}
-
-		map.addLayer(markers);
-
-	</script>
-</body>
+  <head>
+    <title>Carte de la Suite du Monde</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet-src.js" integrity="sha512-WXoSHqw/t26DszhdMhOXOkI7qCiv5QWXhH9R7CgvgZMHz1ImlkVQ3uNsiQKu5wwbbxtPzFXd1hK4tzno2VqhpA==" crossorigin=""></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="MarkerCluster/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="MarkerCluster/dist/MarkerCluster.Default.css" />
+    <script src="MarkerCluster/dist/leaflet.markercluster-src.js"></script>
+    <script src="data.js"></script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script type="text/javascript">
+     var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	 maxZoom: 20,
+	 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+     });
+     var latlng = L.latLng(45, -1.24);
+     var map = L.map('map', {center: latlng, zoom: 5, layers: [tiles]});
+     var mIcon = L.icon({
+	 iconUrl: 'pmarker.png',
+	 iconSize:     [25, 30], // size of the icon
+	 iconAnchor:   [12, 30], // point of the icon which will correspond to marker's location
+	 popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
+     });
+     var cIcon = L.icon({
+	 iconUrl: 'cmarker.png',
+	 iconSize:     [25, 30], // size of the icon
+	 iconAnchor:   [12, 30], // point of the icon which will correspond to marker's location
+	 popupAnchor:  [0, -25] // point from which the popup should open relative to the iconAnchor
+     });
+     var markers = L.markerClusterGroup({
+	 iconCreateFunction: function (cluster) {
+	     var count = cluster.getChildCount();
+	     var iconSize = 50;
+	     var iconSizeW = 40;
+	     var iconSizeH = 50;
+	     if(count <= 5){
+		 iconSize = 50;
+		 iconSizeW = 40;
+		 iconSizeH = 50;
+	     }else if(count <= 10){
+                 iconSize = 60;
+		 iconSizeW = 50;
+		 iconSizeH = 60;
+	     }else if(count <= 20){
+                 iconSize = 70;
+		 iconSizeW = 60;
+		 iconSizeH = 70;
+	     }else{
+                 iconSize = 80;
+		 iconSizeW = 70;
+		 iconSizeH = 80;
+	     }
+	     return L.divIcon({ html: '<div style="display: table;width: 100%;height: 100%;text-align: center;"><span style="display: table-cell;vertical-align: middle;color:#fff;">'+count+'</span></div>', className: 'mycluster', iconSize: L.point(iconSize, iconSize)});
+	 },
+     });
+     for (var i = 0; i < data.length; i++) {
+	 var a = data[i];
+	 var title = a["location"];
+	 var popupText = "<p>";
+         popupText += "<b>Lieu:</b> " + a["location"];
+         if (a["amount"] > 0) {
+             popupText += "<br/><br/><b>Nombre de personnes pour initier la commune:</b> " + a["amount"];
+         }
+         if (a["comment"] !== undefined && a["comment"].length > 0) {
+             popupText += "<br/><br/><i>" + a["comment"] + "</i>";
+         }
+         popupText += "</p>"
+         var marker = L.marker(new L.LatLng(a["lat"], a["long"]), { title: title, icon: mIcon });
+         marker.bindPopup(popupText);
+         markers.addLayer(marker);
+     }
+     // special marker
+     var marker = L.marker(new L.LatLng(55.774966, -25.445688), { title: "Rejoignez la coopérative", icon: cIcon });
+     var popup = L.popup({"autoClose": false, "closeOnClick": null}).setContent('Rejoignez la coopérative. <a href="https://cooperer.lasuitedumonde.com">https://cooperer.lasuitedumonde.com</a>');
+     marker.bindPopup(popup).openPopup();
+     markers.addLayer(marker);
+     map.addLayer(markers);
+    </script>
+  </body>
 </html>
