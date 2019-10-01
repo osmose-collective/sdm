@@ -17,15 +17,20 @@ var data = [
     "amount": 2
   },
   {
+    "lat": 46.7512379,
+    "long": 6.836875200000009,
+    "location": "Cheiry, Suisse"
+  },
+  {
     "lat": 43.600461,
     "long": 2.702604000000065,
     "location": "34330 La Salvetat-sur-Agout, France",
     "amount": 6
   },
   {
-    "lat": 45.797222,
-    "long": 6.104722000000038,
-    "location": "Semnoz, 74540 Viuz-la-Chiésaz, France",
+    "lat": 44.9676086,
+    "long": 5.530064300000049,
+    "location": "Massif du Vercors, 38250 Corrençon-en-Vercors, France",
     "amount": 5
   },
   {
@@ -46,16 +51,42 @@ var data = [
     "location": "Chaulet, 07460 Berrias-et-Casteljau, France"
   },
   {
+    "lat": 33.8356283,
+    "long": -118.31480799999997,
+    "location": "1261 Cabrillo Ave #100, Torrance, CA 90501, États-Unis"
+  },
+  {
     "lat": 48.3181795,
     "long": 7.441624100000013,
     "location": "Alsace, France",
     "amount": 10
   },
   {
-    "lat": 43.6210597,
-    "long": -79.6667875,
-    "location": "115 Matheson Blvd E, Mississauga, ON L4Z 1X8, Canada",
+    "lat": 44.192881,
+    "long": 2.6610560000000305,
+    "location": "12120 Arvieu, France"
+  },
+  {
+    "lat": 46.76247499999999,
+    "long": 5.672915900000021,
+    "location": "Jura, France",
     "amount": 4
+  },
+  {
+    "lat": 45.5614692,
+    "long": 4.912750200000005,
+    "location": "38200 Luzinay, France"
+  },
+  {
+    "lat": 13.794185,
+    "long": -88.89652999999998,
+    "location": "El Salvador",
+    "amount": 2
+  },
+  {
+    "lat": 50.503887,
+    "long": 4.4699359999999615,
+    "location": "Belgique"
   },
   {
     "lat": 45.623206,
@@ -64,9 +95,9 @@ var data = [
     "comment": "Commune Imaginée du Bandiat"
   },
   {
-    "lat": 43.7050255,
-    "long": 5.162367200000062,
-    "location": "98 Rue Frédéric Mistral, 13980 Alleins, France",
+    "lat": 45.1663459,
+    "long": 5.7378874999999425,
+    "location": "20 Rue Paul Helbronner, 38100 Grenoble, France",
     "amount": 2
   },
   {
@@ -88,6 +119,17 @@ var data = [
     "amount": 3
   },
   {
+    "lat": 43.345989,
+    "long": 5.462091999999984,
+    "location": "13380 Plan-de-Cuques, France",
+    "amount": 1
+  },
+  {
+    "lat": 43.836699,
+    "long": 4.360053999999991,
+    "location": "Nîmes, France"
+  },
+  {
     "lat": 49.7624642,
     "long": 4.628505300000029,
     "location": "Ardennes, France",
@@ -105,6 +147,17 @@ var data = [
     "location": "Toulouse, France"
   },
   {
+    "lat": 47.988036,
+    "long": -4.425301999999988,
+    "location": "29710 Plozévet, France"
+  },
+  {
+    "lat": 46.234519,
+    "long": -0.6273079999999709,
+    "location": "79210 Le Bourdet, France",
+    "comment": " 2 maisons mitoyennes (reliées entre elles) = deux espaces de vie qui peuvent être séparés (environ 150 m2 – 8 pièces), au centre du village du Bourdet (79)  "
+  },
+  {
     "lat": 46.3115552,
     "long": 3.416765499999997,
     "location": "Allier, France",
@@ -113,13 +166,24 @@ var data = [
   {
     "lat": 49.003959,
     "long": 0.6378180000000384,
-    "location": "Landepéreuse, France",
+    "location": "Landepéreuse, Mesnil-en-Ouche, France",
     "amount": 10
+  },
+  {
+    "lat": 43.3269942,
+    "long": -0.7532808999999361,
+    "location": "Pyrénées-Atlantiques, France"
   },
   {
     "lat": 48.001937,
     "long": -2.256383000000028,
     "location": "La Guette, 35380 Paimpont, France"
+  },
+  {
+    "lat": 45.4222198,
+    "long": 4.392419399999994,
+    "location": "9 Rue des Docteurs Charcot, 42100 Saint-Étienne, France",
+    "amount": 10
   },
   {
     "lat": 50.503887,
@@ -164,16 +228,31 @@ var data = [
     "amount": 6
   },
   {
+    "lat": 48.8744233,
+    "long": 6.2080932000000075,
+    "location": "Lorraine, France"
+  },
+  {
     "lat": 50.503887,
     "long": 4.4699359999999615,
     "location": "Belgique",
     "amount": 10
   },
   {
+    "lat": 48.600335,
+    "long": -3.4044870000000174,
+    "location": "22420 Trégrom, France"
+  },
+  {
     "lat": 50.7309955,
     "long": 4.485670700000014,
     "location": "1310 La Hulpe, Belgique",
     "amount": 30
+  },
+  {
+    "lat": 48.2020471,
+    "long": -2.93264350000004,
+    "location": "Bretagne, France"
   },
   {
     "lat": 47.0525047,
@@ -205,6 +284,16 @@ var data = [
     "amount": 4
   },
   {
+    "lat": 45.7032695,
+    "long": 3.344853599999965,
+    "location": "Auvergne, France"
+  },
+  {
+    "lat": 42.6012912,
+    "long": 2.5396029999999428,
+    "location": "Pyrénées-Orientales, France"
+  },
+  {
     "lat": -40.900557,
     "long": 174.88597100000004,
     "location": "Nouvelle-Zélande",
@@ -221,6 +310,11 @@ var data = [
     "long": 4.56244259999994,
     "location": "Ardèche, France",
     "amount": 2
+  },
+  {
+    "lat": 49.1105612,
+    "long": 2.2409847999999783,
+    "location": "95290 L'Isle-Adam, France"
   },
   {
     "lat": 48.2633273,
@@ -250,6 +344,11 @@ var data = [
     "long": 1.44346900000005,
     "location": "Ariège, France",
     "amount": 6
+  },
+  {
+    "lat": 48.87987039999999,
+    "long": 0.17125290000001314,
+    "location": "Normandie, France"
   },
   {
     "lat": 48.2020471,
@@ -303,9 +402,9 @@ var data = [
     "amount": 2
   },
   {
-    "lat": 45.7124142,
-    "long": 3.0155824999999368,
-    "location": "Puy-de-Dôme, France",
+    "lat": 45.7720165,
+    "long": 2.9624504999999317,
+    "location": "Puy de Dôme, 63870 Orcines, France",
     "amount": 7
   },
   {
@@ -336,6 +435,11 @@ var data = [
     "long": 2.0627832000000126,
     "location": "Creuse, France",
     "amount": 6
+  },
+  {
+    "lat": 47.27804680000001,
+    "long": -1.8157647000000452,
+    "location": "Loire-Atlantique, France"
   },
   {
     "lat": 47.472339,
@@ -400,10 +504,15 @@ var data = [
     "amount": 1
   },
   {
-    "lat": 48.2020471,
-    "long": -2.93264350000004,
-    "location": "Bretagne, France",
+    "lat": 45.6458239,
+    "long": 5.108966099999975,
+    "location": "6 Rue de Bretagne, 38070 Saint-Quentin-Fallavier, France",
     "amount": 4
+  },
+  {
+    "lat": 48.250135,
+    "long": -1.8252199999999448,
+    "location": "Langouet, France"
   },
   {
     "lat": 44.4845151,
@@ -412,10 +521,9 @@ var data = [
     "amount": 3
   },
   {
-    "lat": 44.837789,
-    "long": -0.5791799999999512,
-    "location": "Bordeaux, France",
-    "amount": 8
+    "lat": 46.1756788,
+    "long": 6.538962099999935,
+    "location": "Haute-Savoie, France"
   },
   {
     "lat": 44.759629,
