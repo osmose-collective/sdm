@@ -18,6 +18,7 @@ import (
 	"github.com/go-chi/chi/middleware"
 	"github.com/go-chi/jsonp"
 	"github.com/go-chi/render"
+	"moul.io/godev"
 )
 
 const (
@@ -88,6 +89,7 @@ func refreshCache() error {
 			log.Printf("failed to b64 decode: %v", err)
 			continue
 		}
+		log.Println(godev.PrettyJSON(entry))
 		if err := json.Unmarshal(dec, &entry.Translated.LatLong); err != nil {
 			log.Printf("failed to parse json: %v", err)
 			continue
