@@ -1,7 +1,10 @@
 github.com/brianloveswords/airtable v0.0.0-20180329193050-a39294038dd9 h1:2oAZVcirE7xEkkA3lQqEB6ElATe5r60zwQoeTQ64WNI=
 github.com/brianloveswords/airtable v0.0.0-20180329193050-a39294038dd9/go.mod h1:jXij3SzY3HghKUmTjQYGRIXyCRBkFK+0wztOaI6a9Bk=
+github.com/go-chi/chi v1.5.5 h1:vOB/HbEMt9QqBqErz07QehcOKHaWFtuj87tTDVz2qXE=
+github.com/go-chi/chi v1.5.5/go.mod h1:C9JqLr3tIYjDOZpzn+BCuxY8z8vmca43EeMgyZt7irw=
 github.com/go-chi/chi v4.0.2+incompatible h1:maB6vn6FqCxrpz4FqWdh4+lwpyZIQS7YEAUcHlgXVRs=
 github.com/go-chi/chi v4.0.2+incompatible/go.mod h1:eB3wogJHnLi3x/kFX2A+IbTBlXxmMeXJVKy9tTv1XzQ=
+github.com/go-chi/chi/v5 v5.0.12/go.mod h1:DslCQbL2OYiznFReuXYUmQ2hGd1aDpCnlMNITLSKoi8=
 github.com/go-chi/jsonp v0.0.0-20170809160916-b971022286e2 h1:2c3FgELeVI+A0/GZ5xOVCshaAhP87//dwmYvOUJUkeo=
 github.com/go-chi/jsonp v0.0.0-20170809160916-b971022286e2/go.mod h1:GDGxNyZ4xc0cql8PZjNrAWIan7yy89rRAMMcHojj/f4=
 github.com/go-chi/render v1.0.1 h1:4/5tis2cKaNdnv9zFLfXzcquC9HbeZgCnxGnKrltBS8=
